@@ -1,0 +1,23 @@
+.loginContainer {
+    background-color: rgba(255, 255, 255, 0.906);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    align-items: center;
+    background-color: rgb(243, 130, 130);
+}
+
+.loginTitle {
+    color: rgba(119, 53, 243, 0.906);
+}

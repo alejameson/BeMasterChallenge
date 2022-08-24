@@ -1,0 +1,86 @@
+[
+    {
+      "email": "väinö.huotari@example.com",
+      "password": "5424",
+      "first_name": "väinö",
+      "last_name": "huotari",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "jeremiah.graham@example.com",
+      "password": "gilbert",
+      "first_name": "jeremiah",
+      "last_name": "graham",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "tom.wolff@example.com",
+      "password": "budlight",
+      "first_name": "tom",
+      "last_name": "wolff",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "florian.hahn@example.com",
+      "password": "iron",
+      "first_name": "florian",
+      "last_name": "hahn",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "mason.abraham@example.com",
+      "password": "belle",
+      "first_name": "mason",
+      "last_name": "abraham",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "ernest.williamson@example.com",
+      "password": "2112",
+      "first_name": "ernest",
+      "last_name": "williamson",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "aurélien.fontai@example.com",
+      "password": "debra",
+      "first_name": "aurélien",
+      "last_name": "fontai",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "priteche.fogaça@example.com",
+      "password": "jabber",
+      "first_name": "priteche",
+      "last_name": "fogaça",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "اميرمحمد.جعفری@example.com",
+      "password": "qwert1",
+      "first_name": "اميرمحمد",
+      "last_name": "جعفری",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "christoffer.christiansen@example.com",
+      "password": "samuel",
+      "first_name": "christoffer",
+      "last_name": "christiansen",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "rosemary.robinson@example.com",
+      "password": "advance",
+      "first_name": "rosemary",
+      "last_name": "robinson",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    },
+    {
+      "email": "melissa.fleming@example.com",
+      "password": "sick",
+      "first_name": "melissa",
+      "last_name": "fleming",
+      "categorys": ["terror", "comedia", "romantica", "accion"]
+    }
+  ]
