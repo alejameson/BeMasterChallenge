@@ -5,7 +5,7 @@ import LockIcon from "@mui/icons-material/Lock";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getUsers } from "../../actions";
+import { getUser, getUsers } from "../../actions";
 
 export function Login() {
   const [user, setUser] = useState({
@@ -50,10 +50,12 @@ export function Login() {
     e.preventDefault();
     if (user.email.length === 0) {
       setErrorEmail(true);
-    } else {
+    } else if (user.password.length > 8) {
+      setErrorPassword(true)
+    }else {
       users.map((u) =>
         u.email === user.email && u.password === user.password
-          ? (navigate("/home"), alert("Welcome"))
+          ? (navigate("/home"), alert("Welcome"), dispatch(getUser(u)))
           : ""
       );
     }
@@ -80,6 +82,7 @@ export function Login() {
         />
         <TextField
           label="Password"
+          error={errorPassword}
           placeholder="*******"
           type="password"
           name="password"

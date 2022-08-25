@@ -4,20 +4,20 @@
       "password": "1234",
       "first_name": "Alejandro",
       "last_name": "Jameson",
-      "categorys": ["terror", "comedia", "romantica", "accion"]
+      "categorys": ["terror", "comedia", "romance", "accion"]
     },
     {
       "email": "santi@gmail.com",
       "password": "1234",
       "first_name": "Santiago",
       "last_name": "Leveque",
-      "categorys": ["suspenso", "musical", "fantasia", "drama"]
+      "categorys": ["suspenso", "comedia", "ficcion", "drama"]
     },
     {
       "email": "bauti@gmail.com",
       "password": "1234",
       "first_name": "Bautista",
       "last_name": "Elipinali",
-      "categorys": ["terror", "drama", "musical", "accion"]
+      "categorys": ["terror", "drama", "romance", "accion"]
     }
   ]

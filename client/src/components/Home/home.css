@@ -1,0 +1,9 @@
+.home {
+    background-color: aliceblue;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
