@@ -54,9 +54,7 @@ export function Login() {
     }else {
       users.map((u) =>
         u.email === user.email && u.password === user.password
-          ? (navigate("/home"), alert("Welcome"), dispatch(getUser(u)))
-          : alert("Invalid username or password")
-      );
+          && (navigate("/home"), alert("Welcome"), dispatch(getUser(u))));
     }
   };
   return (
