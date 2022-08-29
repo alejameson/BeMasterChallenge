@@ -1,4 +1,4 @@
-import { GET_USER, GET_USERS, GET_CATEGORY, GET_MOVIES, GET_CATEGORY_MOVIES } from "../actions";
+import { GET_USER, GET_USERS, GET_CATEGORY, GET_MOVIES, GET_CATEGORY_MOVIES, GET_MOVIE_BY_ID } from "../actions";
 
 const initialState = {
     users: [],
@@ -9,7 +9,8 @@ const initialState = {
     romance: [],
     suspenso: [],
     accion: [],
-    drama: []
+    drama: [],
+    movieSelected: {}
 }
 
 function rootReducer (state = initialState, action){
@@ -41,41 +42,45 @@ function rootReducer (state = initialState, action){
             }
         
         case GET_CATEGORY_MOVIES:
-            if(state.category){
-                console.log(state.category, 'STATE CATEGORY')
-            }else {
-                console.log("VACIO");
-            }
+        if(state.category){
             if(state.category === "terror"){
                 return {
                     ...state,
-                    terror: state.movies.flatMap((m) => m.category.filter(c => c==="terror").length && m)
+                    terror: state.movies.flatMap((m) => m.category.filter((c) => c==="terror").length === 1 && m).filter((e) => e !== false)
                 }
             }else if(state.category === "drama") {
                 return {
                     ...state,
-                    drama: state.movies.flatMap((m) => m.category.filter(c => c==="drama").length && m)
+                    drama: state.movies.flatMap((m) => m.category.filter((c) => c==="drama").length === 1 && m).filter((e) => e !== false)
                 }
             }else if(state.category === "suspenso") {
                 return {
                     ...state,
-                    suspenso: state.movies.flatMap((m) => m.category.filter(c => c==="suspenso").length && m)
+                    suspenso: state.movies.flatMap((m) => m.category.filter((c) => c==="suspenso").length === 1 && m).filter((e) => e !== false)
                 }
             }else if(state.category === "accion") {
                 return {
                     ...state,
-                    accion: state.movies.flatMap((m) => m.category.filter(c => c==="accion").length && m)
+                    accion: state.movies.flatMap((m) => m.category.filter((c) => c==="accion").length === 1 && m).filter((e) => e !== false)
                 }
             }else if(state.category === "comedia") {
                 return {
                     ...state,
-                    comedia: state.movies.flatMap((m) => m.category.filter(c => c==="comedia").length && m)
+                    comedia: state.movies.flatMap((m) => m.category.filter((c) => c==="comedia").length === 1 && m).filter((e) => e !== false)
                 }
             }else if(state.category === "romance") {
                 return {
                     ...state,
-                    romance: state.movies.flatMap((m) => m.category.filter(c => c==="romance").length && m)
+                    romance: state.movies.flatMap((m) => m.category.filter((c) => c==="romance").length === 1 && m).filter((e) => e !== false)
                 }
+            }
+        }
+
+        case GET_MOVIE_BY_ID:
+            console.log(state.movies[2].id, "STATE MOVIE ID")
+            return {
+                ...state,
+                movieSelected: state.movies.filter((m) => m.id == action.payload)
             }
 
         default:

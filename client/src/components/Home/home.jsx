@@ -1,29 +1,20 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { Box, Grid } from "@mui/material";
 import { getCategory } from "../../actions";
 import { Link } from "react-router-dom";
 
-
 export function Home() {
-  const [category, setCategory] = useState("")  
   const user = useSelector((state) => state.user);
 
-  const navigate = useNavigate()
-  
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    if(category) {
-        dispatch(getCategory(category))
-    }
-  }, [dispatch, category])
+  const dispatch = useDispatch();
 
-  /* const handleOnClick = () => {
-    navigate.push('/category')
-  } */
+  const handleOnClick = (c) => {
+    dispatch(getCategory(c));
+  };
 
   return (
     <div className="home">
@@ -50,7 +41,22 @@ export function Home() {
                 },
               }}
             >
-              <Link to="/category"><div onClick={() => {setCategory(c)/* , handleOnClick() */ }}><h1>{c}</h1></div></Link>
+              <Link
+                to={`/category`}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <div onClick={() => handleOnClick(c)}>
+                  <h1>{c}</h1>
+                </div>
+              </Link>
             </Box>
           </Grid>
         ))}

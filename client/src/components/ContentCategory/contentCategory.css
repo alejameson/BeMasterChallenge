@@ -1,0 +1,24 @@
+.categorysContainer {
+ display: flex;
+ justify-content: center;
+}
+
+ 
+ .movieCard {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    align-items: center;
+    color: white;
+    width: 260px;
+    height:442px;
+    background-color: rgba(3, 3, 0, 0.384);
+    border: 10px;
+    border-color: black;
+    margin: 30px;
+ }
+
+ .link {
+   text-decoration: "none";
+   color: white;
+ }
