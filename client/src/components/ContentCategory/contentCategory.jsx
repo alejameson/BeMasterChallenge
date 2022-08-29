@@ -13,6 +13,7 @@ export function ContentCategory () {
     const romance = useSelector(state => state.romance);
     const suspenso = useSelector(state => state.suspenso);
     const accion = useSelector(state => state.accion);
+    const ficcion = useSelector(state => state.ficcion);
     const drama = useSelector(state => state.drama);
 
     useEffect(() => {
@@ -51,6 +52,12 @@ export function ContentCategory () {
                    <img src={a.poster} alt="" width="260" height="335" />
                    <h2>{a.name.length < 19 ? a.name : a.name.slice(0,18) + "..."}</h2>
                    <Link to={`/detail/${a.id}`} style={{textDecoration: "none", color: "white"}}><Button color="secondary" variant="contained" fullWidth>Trailer 🎬</Button></Link>
+                </div>
+            )): categorySelected === "ficcion" ? ficcion.map((f) => (
+                <div className="movieCard">
+                   <img src={f.poster} alt="" width="260" height="335" />
+                   <h2>{f.name.length < 19 ? f.name : f.name.slice(0,18) + "..."}</h2>
+                   <Link to={`/detail/${f.id}`} style={{textDecoration: "none", color: "white"}}><Button color="secondary" variant="contained" fullWidth>Trailer 🎬</Button></Link>
                 </div>
             )): categorySelected === "drama" && drama.map((d) => (
                 <div className="movieCard">

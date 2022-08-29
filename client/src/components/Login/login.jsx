@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 import { Grid, Paper, TextField, Avatar, Button } from "@mui/material";
 import LockIcon from "@mui/icons-material/Lock";
 import { useNavigate } from "react-router-dom";
-import "./login.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, getUsers } from "../../actions";
+import Alert from '@mui/material/Alert';
+import "./login.css";
 
 export function Login() {
   const [user, setUser] = useState({
@@ -29,8 +30,6 @@ export function Login() {
   useEffect(() => {
     dispatch(getUsers());
   }, [dispatch]);
-
-  console.log(users, "USERS");
 
   const handleChange = (e) => {
     if (e.target.name === "email") {
@@ -56,7 +55,7 @@ export function Login() {
       users.map((u) =>
         u.email === user.email && u.password === user.password
           ? (navigate("/home"), alert("Welcome"), dispatch(getUser(u)))
-          : ""
+          : alert("Invalid username or password")
       );
     }
   };

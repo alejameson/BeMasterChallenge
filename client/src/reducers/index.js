@@ -9,6 +9,7 @@ const initialState = {
     romance: [],
     suspenso: [],
     accion: [],
+    ficcion: [],
     drama: [],
     movieSelected: {}
 }
@@ -23,7 +24,6 @@ function rootReducer (state = initialState, action){
             }
 
         case GET_USER:
-            console.log(action, "ACTION REDUCER")
             return {
                 ...state,
                 user: action.payload
@@ -73,11 +73,15 @@ function rootReducer (state = initialState, action){
                     ...state,
                     romance: state.movies.flatMap((m) => m.category.filter((c) => c==="romance").length === 1 && m).filter((e) => e !== false)
                 }
+            }else if(state.category === "ficcion") {
+                return {
+                    ...state,
+                    ficcion: state.movies.flatMap((m) => m.category.filter((c) => c==="ficcion").length === 1 && m).filter((e) => e !== false)
+                }
             }
         }
 
         case GET_MOVIE_BY_ID:
-            console.log(state.movies[2].id, "STATE MOVIE ID")
             return {
                 ...state,
                 movieSelected: state.movies.filter((m) => m.id == action.payload)

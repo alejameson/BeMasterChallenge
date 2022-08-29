@@ -7,16 +7,12 @@
 .detail{
     display: flex;
     justify-content: center;
-    /* position: relative;
-    left: 175px;
-    top: 100px; */
     margin: 10px;
     width: 1250px;
     height: 700px;
     color: white;
     font-family: monospace afim10;
     background-color: rgba(0, 0, 0, 0.386);
-    /* background: url("https://i.pinimg.com/originals/df/24/34/df243411e8f0257618381d5bebf6db38.jpg"); */
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 8.5px );
     -webkit-backdrop-filter: blur( 8.5px );
@@ -74,12 +70,6 @@
 .detaildesc{
     width: 600px;
     color: white;
-    /* background: rgba( 0, 0, 0, 0.80 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
 
 .descript{

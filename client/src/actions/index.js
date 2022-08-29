@@ -16,7 +16,6 @@ export function getUsers() {
 };
 
 export function getUser(user) {
-    console.log(user, 'USER ACTION')
     return {
         type: GET_USER,
         payload: user
@@ -24,7 +23,6 @@ export function getUser(user) {
 };
 
 export function getCategory(category) {
-    console.log(category, 'ACTIONS CATEGORY')
     return {
         type: GET_CATEGORY,
         payload: category
@@ -45,7 +43,6 @@ export function getCategoryMovies() {
 };
 
 export function getMovieById(id) {
-    console.log(id, "DEBERIA TRAER EL NUM")
     return {
         type: GET_MOVIE_BY_ID,
         payload: id,

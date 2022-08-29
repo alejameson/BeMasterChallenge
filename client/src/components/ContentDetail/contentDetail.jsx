@@ -12,8 +12,6 @@ export function ContentDetail() {
   const movieSelected = useSelector((state) => state.movieSelected);
   const { id } = useParams();
 
-  console.log(id, "ID PARAMS");
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,8 +19,6 @@ export function ContentDetail() {
   }, [dispatch]);
 
   const movie = movieSelected[0];
-
-  console.log(movieSelected, "MOVIE SELECTED");
 
   return (
     <div className="detailContainer">
