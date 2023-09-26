@@ -1,6 +1,18 @@
 # BeMaster Challenge
 Front End BeMaster challenge
 
+## Imagenes
+
+<p align="center">
+  <img height="200" src="./public/image1.png" />
+</p>
+<p align="center">
+  <img height="200" src="./public/image2.png" />
+</p>
+<p align="center">
+  <img height="200" src="./public/image3.png" />
+</p>
+
 ## Pasos para correr la app
 Para correr la web debemos seguir los siguientes pasos
 
